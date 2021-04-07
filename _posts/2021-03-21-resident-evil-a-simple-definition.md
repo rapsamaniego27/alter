@@ -19,11 +19,11 @@ layout: single-post
 image: /assets/files/post1.jpg
 date: 2020-07-16T05:53:15.929Z
 categories:
-  - Family
-  - Practice
+  - Sex
+  - Philippines
 tags:
-  - Folk
-  - Rock N Roll
+  - Japanese
+  - Condom
 authors:
   - name: Rap Esteva
 additional:
