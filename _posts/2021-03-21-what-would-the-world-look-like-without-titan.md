@@ -19,8 +19,7 @@ categories:
   - Love
   - Personal
 tags:
-  - Folk
-  - Rock
+  - Amateur
 authors:
   - name: Rap Esteva
 ---
