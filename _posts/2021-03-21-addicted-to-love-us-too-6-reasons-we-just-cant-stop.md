@@ -12,14 +12,11 @@ layout: single-post
 image: /assets/files/post2.jpg
 date: 2021-01-11T03:44:32.525Z
 categories:
-  - Instruments
   - Personal
+  - Health
 tags:
-  - Piano
-  - Rock
-  - Rock N Roll
-  - Country
-  - Violin
+  - Condom
+  - Amateur
 authors:
   - name: Rap Esteva
 ---
