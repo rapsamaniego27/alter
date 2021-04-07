@@ -22,9 +22,8 @@ categories:
   - Love
   - Genres
 tags:
-  - Guitar
-  - Rock N Roll
-  - Folk
+  - Teen
+  - Romantic
 authors:
   - name: Rap Esteva
   - name: Levi Ackerman
