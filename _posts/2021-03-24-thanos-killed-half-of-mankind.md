@@ -12,16 +12,10 @@ layout: single-post
 image: /assets/files/post1.jpg
 date: 2021-03-24T03:37:22.850Z
 categories:
-  - Custom
+  - Pornography
 tags:
-  - Guitar
-  - Folk
-  - Piano
-  - Punk
-  - Rock
-  - Country
-  - Violin
-  - Rock N Roll
+  - Amateur
+  - Romantic
 authors:
   - name: Rap Esteva
 additional:
