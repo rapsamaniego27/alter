@@ -1,0 +1,14 @@
+<div class="blog-card hex-dark">
+  <img src="{{site.baseurl}}{{post.image}}" alt="Blog - {{ post.title }}" title="Blog - {{ post.title }}" class="blog-card__image" loading="lazy">
+  <div class="blog-card__content">
+    <div class="blog-card__heading">
+      <h6 class="blog-card__date hex-gray">{{ post.date | date: "%B %-d, %Y" }}</h6>
+      <h5 class="hex-white">{{post.title}}</h5>
+    </div>
+
+    <p class="blog-card__desc">{{post.excerpt}}
+    </p>
+
+    <a href="{{ post.url }}" class="blog-card__link hex-tertiary" title="{{post.title}}">Read more <i class="fas fa-arrow-right"></i></a>
+  </div>
+</div>

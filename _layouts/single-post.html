@@ -1,0 +1,121 @@
+---
+layout: default
+---
+
+<div class="container-xl blog-container mt-40 mb-40 px-4">
+  <div class="row">
+    <div class="col-lg-9 col-md-8 col-xs-12 post-section">
+      <div class="post-main">
+        <img src="{{site.baseurl}}{{page.image}}" alt="{{ page.title }}" title="{{ page.title }}" class="post-image" loading="lazy">  
+
+        {% if page.image-credits %}
+          <small class="post-image__author hex-gray">photo by: {{ page.image-credits }}</small>
+        {% endif %}
+
+        <div class="post-heading">
+          <h1 class="post-title hex-tertiary text-center">{{ page.title }}</h1>
+          <p class="post-details text-center">Published on {{ page.date | date: "%B %-d,  %Y" }} by
+            <span class="post-authors">
+              {% for author in page.authors %}
+               <span class="author">{{author.name}}</span>
+              {% endfor %}
+            </span>
+          </p>
+          <p class="post-categories hex-white text-center"><strong>Categories:</strong>
+            {% for category in page.categories %}
+              <a href="{{site.baseurl}}/categories/{{category}}/" class="post-category" target="_blank">{{category}}</a>
+            {% endfor %}
+          </p>
+
+          <div class="d-flex justify-content-between flex-wrap-reverse mt-30">
+            <a href="{{ site.baseurl }}/blog" class="hex-tertiary mt-20"><strong><i class="fas fa-arrow-left"></i> &nbsp; Back to
+                Blog</strong></a>
+            <small class="post-tags hex-white text-left mt-20"><strong>Tags:</strong>
+              {% for tag in page.tags %}
+                <a href="{{site.baseurl}}/tags/{{tag}}/" class="post-tag" target="_blank">{{tag}}</a>
+              {% endfor %}
+            </small>
+          </div>
+        </div>
+
+        <p class="post-content">
+         {{ page.description }}
+        </p>
+
+
+        {% for additional in page.additional %}
+          <div class="post-content__additional">
+            <img src="{{site.baseurl}}{{ additional.block.add-image }}" alt="{{additional.block.add-image-alt}}" title="{{additional.block.add-image-alt}}" class="post-content__additional-image" loading="lazy">
+           
+            {% if additional.block.add-image-credits %}
+              <small class="post-image__author hex-gray">photo by: {{additional.block.add-image-credits}}</small>
+            {% endif %}
+
+            <p class="post-content__additional-text">
+              {{ additional.block.add-content }}
+            </p>
+          </div>
+
+        {% endfor %}
+
+       
+
+        <a href="{{ site.baseurl }}/blog" class="hex-tertiary mb-20"><strong><i class="fas fa-arrow-left"></i> &nbsp; Back to Blog</strong></a>
+      </div>
+    </div>
+
+    <!-- Col Sidebar -->
+    <div class="col-lg-3 col-md-4 col-xs-12">
+      <div class="post-sidebar background-primary">
+        <form class="post-form" method="GET">
+          <input type="text" class="post-search" placeholder="Search for a post ..." value="" id="searchBox">
+          <button id="searchBtn" type="submit" class="post-search__btn background-accent hex-white">
+            <i class="fas fa-search post-search__icon"></i>
+          </button>
+        </form>
+
+        <script>
+          const searchBtn = document.querySelector('#searchBtn');
+          const searchBox = document.querySelector('#searchBox');
+
+          searchBtn.addEventListener('click', (e)=> {
+            e.preventDefault();
+            window.location.href = `{{site.baseurl}}/search-post?val=${searchBox.value}`
+          });
+
+
+        </script>
+
+       
+        <div class="post-others">
+          <!-- Row Categories -->
+          <div class="sidebar-categories__container mt-40">
+            <h5 class="sidebar-title hex-white"> Categories:</h5>
+            <ul class="sidebar-categories__list">
+              {% include snippets/random-categories.html %}
+            </ul>
+          </div>
+
+          <!-- Row Other Posts -->
+          <div class="recent-posts__container mt-40">
+            <h5 class="sidebar-title hex-white"> Other Posts:</h5>
+            <ul class="sidebar-posts__list">
+              
+                {% include snippets/random-posts.html %}
+            </ul>
+          </div>
+
+          <!-- Row Tags -->
+          <div class="sidebar-tags__container mt-40">
+            <h5 class="sidebar-title hex-white">Tags:</h5>
+            <ul class="sidebar-tags__list">
+              {% include snippets/random-tags.html %}
+            </ul>
+          </div>
+        </div>
+
+        <a href="{{ site.baseurl }}/contact" class="btn cbtn-tertiary btn-sidebar">Contact Me</a>
+      </div>
+    </div>
+  </div>
+</div>

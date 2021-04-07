@@ -1,0 +1,147 @@
+/* Biography */
+
+.bio-section__main-topic{
+  margin-top:60px;
+  margin-bottom:60px;
+
+  @media only screen and (max-width:768px){
+   display:flex;
+   flex-direction: column;
+
+   /* Bio Section Orders flex  */
+   .bio-section__title{
+     order:1;
+   }
+   .bio-section__img{
+     order:3;
+   }
+
+   .bio-section__description{
+     order:2;
+   }
+  }
+}
+
+.bio-section{
+  margin-top:60px; 
+
+  .bio-section__title{
+    color:var(--tertiary) !important;
+
+    @media only screen and (max-width:576px){
+      margin-left:20px;
+      margin-right:20px;
+      margin-top:20px;
+    }
+  }
+
+  .bio-section__sub-topic__title{
+    color:var(--white) !important;
+
+    @media only screen and (max-width:576px){
+      margin-left:20px;
+      margin-right:36px;
+    }
+  }
+
+  .bio-section__sub-topic__add-desc{
+    
+    @media only screen and (max-width:768px){
+     margin-right:35px;
+    }
+    
+    @media only screen and (max-width:576px){
+      margin-left:20px;  
+    }
+  }
+
+  .bio-section__description, 
+  .bio-section__sub-topic__desc,
+  .bio-section__sub-topic__add-desc{
+    >p{
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      line-height:1.875rem;
+    }
+  }
+  
+  .bio-section__sub-topic__desc{
+    @media only screen and (max-width:1366px){
+     margin-right:35px;
+    }
+
+    @media only screen and (max-width:576px){
+      margin-left:20px;
+    }
+  }
+
+  .bio-section__description{
+    margin-top:20px;
+
+    @media only screen and (max-width:1366px){
+     margin-right:34px;
+    }
+    
+    @media only screen and (max-width:576px){
+      margin-left:20px;
+      margin-right:36px;
+    }
+  }
+
+  
+
+  .bio-section__sub-topic{
+    margin-top:20px;
+    margin-bottom:40px;
+  }
+
+  .bio-section__sub-topic__gallery{
+    display:flex;
+    margin-top:20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    >*{
+      flex-basis:30%;
+    }
+
+    @media only screen and (max-width:1000px){
+      justify-content: space-around;
+     >img{
+       margin-top:20px;
+     }
+    }
+  }
+
+}
+
+.bio-section__sub-topic__img{
+  margin:0 30px 20px 0 !important;
+
+  @media only screen and (max-width:992px){
+    margin: 0 auto 20px auto !important;
+  }
+}
+
+
+/* Clearfix/float override */
+
+.bio-section__main-topic{
+    .float-md-end{
+        margin: 0 0 20px 30px !important;
+        
+         @media only screen and (max-width:768px){
+          margin: 0 auto 20px auto !important;
+        }
+    }
+
+    .float-md-start{
+        margin: 0 30px 20px 0 !important;
+        
+         @media only screen and (max-width:768px){
+          margin: 0 auto 20px auto !important;
+        }
+    }
+}
+
+
+    
+   

@@ -1,0 +1,67 @@
+<div class="container blog-container">
+  <h1 class="text-center hex-tertiary mt-30">{{  site.data.blog.title }}</h1>
+  <p class="text-center ml-20 mr-20">
+    {{ site.data.blog.description }}
+  </p>
+</div>
+
+
+
+{% assign page_url = page.url %}
+<!-- <h1>{{page.url}}</h1> -->
+<!-- Row Categories -->
+<div class="container blog-container mt-30">
+  <div class="blog-categories__container row background-primary">
+    <div class="col-md-6">
+      <h4 class="hex-white pl-20">Categories:</h4>
+      <ul class="category-list d-flex justify-content-around flex-wrap mt-20">
+        <li class="category-item {% if page.slug == 'all' %}category-item--active{% endif %}">
+          <a href="{{ site.baseurl }}/blog/" class="category-link" title="Blog | All">All</a>
+        </li>
+        <li class="category-item {% if page_url contains 'blog/categories/music/' %}category-item--active{% endif %}">
+          <a href="{{ site.baseurl }}/blog/categories/music/" class="category-link" title="Blog | Music">Music</a>
+        </li>
+        <li class="category-item {% if page_url contains 'blog/categories/genres/' %}category-item--active{% endif %}">
+          <a href="{{ site.baseurl }}/blog/categories/genres/" class="category-link" title="Blog | Genres">Genres</a>
+        </li>
+        <li class="category-item {% if page_url contains 'blog/categories/gigs/' %}category-item--active{% endif %}">
+          <a href="{{ site.baseurl }}/blog/categories/gigs/" class="category-link" title="Blog | Gigs">Gigs</a>
+        </li>
+        <li class="category-item {% if page_url contains 'blog/categories/family/' %}category-item--active{% endif %}">
+          <a href="{{ site.baseurl }}/blog/categories/family/" class="category-link" title="Blog | Family">Family</a>
+        </li>
+        <li class="category-item {% if page_url contains 'blog/categories/love/' %}category-item--active{% endif %}"><a href="{{ site.baseurl }}/blog/categories/love/" class="category-link" title="Blog | Love">Love</a></li>
+        <li class="category-item {% if page_url contains 'blog/categories/instruments/' %}category-item--active{% endif %}">
+          <a href="{{ site.baseurl }}/blog/categories/instruments/" class="category-link" title="Blog | Instruments">Instruments</a>
+        </li>
+        <li class="category-item {% if page_url contains 'blog/categories/personal/' %}category-item--active{% endif %}">
+          <a href="{{ site.baseurl }}/blog/categories/personal/" class="category-link" title="Blog | Personal">Personal</a>
+        </li>
+        <li class="category-item {% if page_url contains 'blog/categories/practice/' %}category-item--active{% endif %}">
+          <a href="{{ site.baseurl }}/blog/categories/practice/" class="category-link" title="Blog | Practice">Practice</a>
+        </li>
+        <li class="category-item {% if page_url contains 'blog/categories/guest/' %}category-item--active{% endif %}">
+          <a href="{{ site.baseurl }}/blog/categories/guest/" class="category-link" title="Blog | Guest">Guest</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-6 d-flex justify-content-center align-items-center flex-column">
+      <form class="custom-form">
+        <input type="text" class="custom-search" placeholder="Search for a post ..." id="search-input">
+        <button type="submit" class="custom-search__btn background-accent hex-white" disabled>
+          <i class="fas fa-search custom-search__icon"></i>
+        </button>
+      </form>
+      <div class="d-flex justify-content-around mt-10">
+        <a href="{{ site.baseurl }}/blog/filter/oldest/" class="category-filter__item {% if page.slug == 'oldest' %}hex-tertiary{% endif %}" title="Blog | Oldest">Oldest</a>
+        <a href="{{ site.baseurl }}/blog/filter/asc/" class="category-filter__item {% if page.slug == 'asc' %}hex-tertiary{% endif %}" title="Blog | Ascending">Alpha Ascending</a>
+        <a href="{{ site.baseurl }}/blog/filter/desc/" class="category-filter__item {% if page.slug == 'desc' %}hex-tertiary{% endif %}" title="Blog | Descending">Alpha Descending</a>
+      </div>
+    </div>
+  </div>
+
+  
+  {% if paginator.total_posts %}
+    <p class="blog-results mt-20 ml-30" id="blogResults">{{ paginator.total_posts }} results found</p>
+  {% endif %}
+</div>

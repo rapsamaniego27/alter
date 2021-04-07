@@ -1,0 +1,22 @@
+title: Site Information
+description: Thank you for stopping by my site. I made this so I can present
+  projects to clients, developers and employer. As well as featuring my
+  skillset. Listed here are the technologies I used for my Personal portfolio
+  site and the people that shared their knowledge and efforts into making this
+  site possible.
+technologies:
+  - Jekyll
+  - Netlify
+  - NetlifyCMS
+  - Bootstrap
+  - Github
+  - Webpack
+  - SASS
+  - Javascript
+collaborators:
+  - content:
+      name: Emmanuel S. Martinez
+      website: https://www.facebook.com/emmanuel.martinez.58
+  - content:
+      name: Moses Lucas
+      website: https://www.facebook.com/moses.lucas.5

@@ -1,0 +1,64 @@
+{% for bio in site.data.bio.bio-sections %}
+  <!-- Row Bio Section -->
+  <div class="container bio-section {{ bio.section.id }}">
+    <!-- Main Topic -->
+    <div class="bio-section__main-topic clearfix">
+      
+      {% if bio.section.image %}
+        <img src="{{site.baseurl}}{{bio.section.image}}" alt="{{site.owner}} - {{bio.section.title}}" title="{{site.owner}} - {{bio.section.title}}"
+          class="cmp-image__portrait float-none bio-section__img 
+          {% if bio.section.alignment == 'right' %} float-md-end {% elsif bio.section.alignment == 'left' %} float-md-start {% endif %}" loading="lazy">
+        
+      {% endif %}
+
+      <h2 class="bio-section__title">{{ bio.section.title }}</h2>
+      <div class="bio-section__description">
+       <p>
+          {{ bio.section.description }}
+       </p>
+      </div>
+    </div>
+  
+    {% for subtopic in bio.section.subtopics %}
+    <!-- Sub Topic -->
+    <div class="bio-section__sub-topic">
+      <h3 class="bio-section__sub-topic__title">{{ subtopic.group.title }}</h3>
+      <div class="clearfix mt-30">
+    
+        {% if subtopic.group.image != '' %}
+          <img src="{{site.baseurl}}{{subtopic.group.image}}" alt="{{site.owner}} - {{ subtopic.group.title }}" title="{{site.owner}} - {{ subtopic.group.title }}"
+            class="cmp-image__landscape float-none float-lg-start bio-section__sub-topic__img" loading="lazy">
+        {% endif %}    
+        <div class="bio-section__sub-topic__desc">
+          <p>
+            {{subtopic.group.description}}
+          </p>
+        </div>
+      </div>
+      {% if subtopic.group.add_description != '' %}
+        <div class="bio-section__sub-topic__add-desc">
+          <p>
+            {{ subtopic.group.add_description }}
+          </p>
+        </div>
+      {% endif %}
+
+
+      {% if gallery != '' %}
+      <!-- Gallery Images -->
+      <div class="bio-section__sub-topic__gallery">
+        {% for gallery in subtopic.group.gallery %}
+          <img src="{{site.baseurl}}{{gallery.image}}" alt="{{site.owner}} - {{gallery.alt}}" title="{{site.owner}} - {{gallery.alt}}" class="cmp-image__gallery-landscape" loading="lazy">
+        {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+
+    {% endfor %}
+
+    
+  
+  </div>
+  <!-- End Bio Section -->
+{% endfor %}
+

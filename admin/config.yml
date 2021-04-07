@@ -1,0 +1,489 @@
+backend:
+  name: github
+  repo: rapsamaniego27/alter
+  branch: master
+
+media_folder: "assets/files"
+
+# Basic setup for collections
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+    - label: "Home"
+      name: "home"
+      file: "_data/home.yml"
+      fields:
+      - label: "Welcome Tagline"
+        name: "welcome_tagline"
+        widget: "string"
+      - label: "Welcome Subtext"
+        name: "welcome_subtext"
+        widget: "string"
+      - label: "Summary Title"
+        name: "summary_title"
+        widget: "string"
+      - label: "Summary Description"
+        name: "summary_description"
+        widget: "text"
+      - label: "Summary Image"
+        name: "summary_image"
+        widget: "image"
+      - label: "Summary Link"
+        name: "summary_link"
+        widget: "string"
+      - label: "Feature Left Title"
+        name: "feature_left_title"
+        widget: "string"
+      - label: "Feature Left Description"
+        name: "feature_left_description"
+        widget: "text"
+      - label: "Feature Left Image (624 x 180)"
+        name: "feature_left_image"
+        widget: "image"
+      - label: "Feature Left Link"
+        name: "feature_left_link"
+        widget: "string"
+      - label: "Feature Right Title"
+        name: "feature_right_title"
+        widget: "string"
+      - label: "Feature Right Description"
+        name: "feature_right_description"
+        widget: "text"
+      - label: "Feature Right Image (624 x 180)"
+        name: "feature_right_image"
+        widget: "image"
+      - label: "Feature Right Link"
+        name: "feature_right_link"
+        widget: "string"
+    - label: "Bio" #Bio
+      name: "bio"
+      file: "_data/bio.yml"
+      create: true
+      fields:
+      - label: Banner
+        name: banner
+        widget: object
+        required: false
+        fields:
+        - label: Banner Image
+          name: banner-image
+          widget: image
+          required: false
+        - label: Tagline
+          name: tagline
+          widget: string
+          required: false
+      - label: "Biography Sections"
+        name: "bio-sections"
+        widget: "list"
+        required: false
+        fields: 
+        - label: "Section"
+          name: "section"
+          widget: object
+          summary: '{{fields.title}}'
+          required: false
+          fields: 
+          - {label: "Section Title",
+            name: "title",
+            widget: "string"}
+          - label: "Section Description"
+            name: "description"
+            widget: "markdown"
+          - label: "Additional Sec Description"
+            name: add_description
+            widget: markdown
+            required: false
+          - label: Section Image (500 x 666)
+            name: image
+            widget: image
+            required: false
+          - label: Icon (Fontawesome HTML)
+            name: icon
+            widget: "string"
+            required: false
+          - label: "Javascript ID"
+            name: id
+            widget: "string"
+          - label: "Alignment of Image"
+            name: "alignment"
+            widget: "select"
+            options: ["right", "left"]
+            default: ["right"]
+          - label: "Subtopicss"
+            name: "subtopics"
+            widget: "list"
+            required: false
+            fields: 
+            - label: "group"
+              name: group
+              widget: object
+              summary: '{{fields.title}}'
+              required: false
+              fields: 
+              - label: Subtopic Title
+                name: title
+                widget: string
+              - label: Subtopic Description
+                name: description
+                widget: markdown
+              - label: Subtopic Image(666 x 374)
+                name: image
+                widget: image
+                required: false
+              - label: Additional Sub Description
+                name: add_description
+                widget: markdown
+                required: false
+              - label: Gallery
+                name: gallery
+                widget: list
+                required: false
+                fields: 
+                - label: Gallery Image Alt Text
+                  name: alt
+                  widget: string
+                - label: Gallery Image
+                  name: image
+                  widget: image
+                  required: false
+    - label: "Lessons"
+      name: "lessons"
+      file: "_data/lessons.yml"
+      fields: 
+      - label: Banner
+        name: banner
+        widget: object
+        fields:
+        - label: Image
+          name: image
+          widget: image
+          required: false
+        - label: Tagline
+          name: tagline
+          widget: string
+          required: false
+      - label: Introduction
+        name: intro
+        widget: object
+        fields:
+        - label: Title
+          name: title
+          widget: string
+          required: false
+        - label: Content
+          name: content
+          widget: text
+          required: false
+      - label: Theory, Technique and Application
+        name: tta
+        widget: object
+        fields:
+        - label: Title
+          name: title
+          widget: string
+          required: false
+        - label: Content
+          name: content
+          widget: text
+          required: false
+      - label: Inclusions
+        name: Inclusions
+        widget: list
+        required: false
+        fields: 
+        - label: Item
+          name: item
+          widget: text
+          required: false
+      - label: CTA
+        name: cta
+        widget: text
+        required: false
+    - label: "Contact"
+      name: contact
+      file: "_data/contact.yml"   
+      fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Description
+        name: description
+        widget: text
+      - label: Phone Number
+        name: phone-number
+        widget: string
+      - label: E-mail
+        name: email
+        widget: string
+      - label: Address
+        name: address
+        widget: text
+      - label: Social
+        name: social
+        widget: list
+        fields:
+        - label: Media
+          name: media
+          widget: string
+          required: false
+        - label: Link
+          name: link
+          widget: string
+          hint: e.g. /blog/ or https://facebook.com
+        - label: isLocal
+          hint: Setting it true will treat Links as relative urls e.g. /blog/
+          name: isLocal
+          widget: boolean
+          default: false
+        - label: Icon
+          hint: Font Awesome Tags you can get at https://fontawesome.com/
+          name: icon
+          widget: string
+    - label: "Blog"
+      name: blog
+      file: "_data/blog.yml"
+      fields: 
+      - label: Title
+        name: title
+        widget: string
+      - label: Description
+        name: description
+        widget: text  
+    - label: "Note"
+      name: note
+      file: "_data/note.yml"
+      fields: 
+      - label: Note Content
+        name: content
+        widget: text
+        required: false
+    - label: "Defaults"
+      name: defaults
+      file: "_data/defaults.yml"
+      fields:
+      - label: Socials
+        name: socials
+        widget: list
+        fields:
+        - label: Media
+          name: media
+          widget: string
+          required: false
+        - label: Link
+          name: link
+          widget: string
+          hint: e.g. /blog/ or https://facebook.com
+        - label: isLocal
+          hint: Setting it true will treat Links as relative urls e.g. /blog/
+          name: isLocal
+          widget: boolean
+          default: false
+        - label: Icon
+          hint: Font Awesome Tags you can get at https://fontawesome.com/
+          name: icon
+          widget: string
+    - label: "Site Info"
+      name: "site-info"
+      file: "_data/site-info.yml"
+      fields:
+      - label: Page Title
+        name: title
+        widget: string
+        required: false
+      - label: Page Description
+        name: description
+        widget: text
+        required: false
+      - label: Technologies Used
+        name: technologies
+        widget: list
+      - label: Collaborators
+        name: collaborators
+        widget: list
+        required: false
+        fields:
+        - label: "Content"
+          name: content
+          widget: object
+          required: false
+          fields:
+          - label: Name
+            name: name
+            widget: string
+            required: false
+          - label: Website
+            name: website
+            widget: string
+            required: false
+  - label: "Metas" # Page Metas
+    name: "metas"
+    create: true
+    folder: "_metas"
+    fields:
+    - label: "Title"
+      name: "title"
+      widget: "string"
+      hint: "Recommendation: Must not go beyond 60 characters."
+    - label: "Meta Description"
+      name: "description"
+      widget: "text"
+      hint: "Recommendation: Must not go beyond 170 characters." 
+    - label: "Slug"
+      name: "slug"
+      widget: "string"
+    - label: "Permalink"
+      name: "permalink"
+      widget: "string"
+    - label: "Meta Image"
+      name: "image"
+      widget: "image"
+      required: false
+  - label: "Posts"
+    name: blog
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    folder: "_posts"
+    fields: 
+    - label: Title
+      name: title
+      widget: string
+    - label: Content
+      name: description
+      widget: markdown
+    - label: Excerpt
+      name: excerpt
+      widget: text
+    - label: Layout
+      name: layout
+      widget: hidden
+      default: single-post
+    - label: Banner Image (814 x 312)
+      name: image
+      widget: image
+      required: false
+    - label: Banner Image Credits
+      name: image-credits
+      widget: string
+      required: false
+    - label: Publish Date
+      name: date
+      widget: datetime
+    - label: Categories
+      name: categories
+      widget: relation
+      collection: categories
+      search_fields: ["name"]
+      value_field: "name"
+      display_fields: ["name"]
+      multiple: true
+    - label: Tags
+      name: tags
+      widget: relation
+      collection: tags
+      search_fields: ["name"]
+      value_field: "name"
+      display_fields: ["name"]
+      multiple: true
+      required: false
+    - label: Authors
+      name: authors
+      widget: list
+      fields: 
+      - label: name
+        name: name
+        default: "Rap Esteva"
+        widget: string
+    - label: Additional content
+      name: additional
+      widget: list
+      required: false
+      fields: 
+      - label: Block
+        name: block
+        widget: object
+        required: false
+        fields: 
+        - label: Additional Image (814 x any height)
+          name: add-image
+          widget: image
+          required: false
+        - label: Additional Image Credits
+          name: add-image-credits
+          widget: string
+          required: false
+        - label: Additional Image Alt
+          name: add-image-alt
+          widget: string
+          required: false
+        - label: Additional Content
+          name: add-content
+          widget: text
+          required: false
+  - label: "Categories"
+    name: "categories"
+    create: true
+    folder: "_categories"
+    fields: 
+    - label: Name
+      name: name
+      widget: string
+    - label: Title
+      name: title
+      widget: string
+      default: Blog | 
+      hint: For SEO e.g. Blog | Love
+      required: false
+    - label: Slug
+      name: slug
+      widget: string
+    - label: Permalink
+      name: permalink
+      widget: string
+      hint: Value should be /categories/:name of category/
+      default: /categories/:slug
+    - label: Layout
+      name: layout
+      widget: hidden
+      default: sidebar-categories
+    - label: Description
+      name: description
+      widget: text
+      default: Blogs for the category  
+      hint: For SEO e.g. Blog for the category 
+      required: false
+  - label: "Tags"
+    name: "tags"
+    create: true
+    folder: "_tags"
+    fields: 
+    - label: Name
+      name: name
+      widget: string
+    - label: Title
+      name: title
+      widget: string
+      default: Blog | 
+      hint: For SEO e.g. Blog | Love
+      required: false
+    - label: Slug
+      name: slug
+      widget: string
+    - label: Permalink
+      name: permalink
+      widget: string
+      hint: Value should be /tags/:name of category/
+      default: /tags/namehere/
+    - label: Description
+      name: description
+      widget: text
+      default: Blog tagged as
+      hint: For SEO e.g. Blogs tagged as Guitar
+      required: false
+    - label: Layout
+      name: layout
+      widget: hidden
+      default: sidebar-tags
+
+
