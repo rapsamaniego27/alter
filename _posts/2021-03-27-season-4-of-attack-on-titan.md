@@ -20,10 +20,14 @@ image: /assets/files/post4.jpg
 image-credits: Peter Parker
 date: 2021-03-27T11:41:44.791Z
 categories:
-  - Family
+  - Content
+  - Personal
+  - Health
 tags:
-  - Rock N Roll
-  - Guitar
+  - Condom
+  - Virgin
+  - Penetration
+  - Threesome
 authors:
   - name: Rap Esteva
   - name: Levi Ackerman
