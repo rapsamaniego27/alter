@@ -1,7 +1,7 @@
 url: "https://rapmusikero.com" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
-title: "Rap Esteva Music" # the name of your site, e.g. ACME Corp.
-owner: "Rap Esteva"
+title: "Hidden Insights" # the name of your site, e.g. ACME Corp.
+owner: "Hidden Owner"
 
 exclude: ["source", "node_modules", "mix-manifest.json", "package-lock.json", "package.json", "webpack.mix.js", ".jekyll-cache"]
 

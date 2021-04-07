@@ -185,7 +185,7 @@ collections:
       fields: 
       - label: name
         name: name
-        default: "Rap Esteva"
+        default: "Anonymous"
         widget: string
     - label: Additional content
       name: additional
