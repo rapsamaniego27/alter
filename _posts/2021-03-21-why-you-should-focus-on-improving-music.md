@@ -14,17 +14,13 @@ layout: single-post
 image: /assets/files/post6.jpg
 date: 2021-01-07T03:29:11.269Z
 categories:
-  - Family
-  - Genres
-  - Music
   - Love
   - Personal
-  - Practice
-  - Gigs
-  - Instruments
+  - Films
+  - Philippines
+  - Sex
 tags:
-  - Violin
-  - Punk
+  - Virgin
 authors:
   - name: Rap Esteva
 ---
