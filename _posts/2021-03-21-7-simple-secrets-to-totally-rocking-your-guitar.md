@@ -13,12 +13,11 @@ layout: single-post
 image: /assets/files/post6.jpg
 date: 2021-01-31T03:45:44.899Z
 categories:
-  - Music
-  - Genres
   - Love
+  - Guest
 tags:
-  - Violin
-  - Rock
+  - Threesome
+  - Virgin
 authors:
   - name: Rap Esteva
 ---
