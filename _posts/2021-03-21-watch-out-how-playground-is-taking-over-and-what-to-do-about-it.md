@@ -12,13 +12,11 @@ layout: single-post
 image: /assets/files/post6.jpg
 date: 2021-02-25T03:50:11.073Z
 categories:
-  - Family
-  - Practice
-  - Music
-  - Gigs
+  - Films
+  - Sex
 tags:
-  - Piano
-  - Guitar
+  - Condom
+  - Romantic
 authors:
   - name: Rap Esteva
 ---
