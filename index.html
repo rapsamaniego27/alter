@@ -2,70 +2,25 @@
 layout: default
 ---
 
-{% include section/welcome.html %}
  
 <!-- Row Information -->
-<section class="information__container">
-  <div class="container-xxl">
-    <div class="row pt-60 pl-md-30 pr-md-30">
-      <div class="col-md-6 col-sm-12">
-        <a href="{{site.baseurl}}{{site.data.home.summary_link}}" target="_blank" class="d-block" title="{{site.data.home.summary_title}}">
-          <img src="{{site.data.home.summary_image}}" alt="{{site.title}} - {{site.data.home.summary_title}}" title="{{site.title}} - {{site.data.home.summary_title}}" class="cmp-image__landscape" loading="lazy">
-        </a>
-      </div>
+<div class="container-xxl">
+  <div class="row pt-60 pl-md-30 pr-md-30">
+    <div class="col-md-6 col-sm-12">
+      <a href="{{site.baseurl}}{{site.data.home.summary_link}}" target="_blank" class="d-block"
+        title="{{site.data.home.summary_title}}">
+        <img src="{{site.data.home.summary_image}}" alt="{{site.title}} - {{site.data.home.summary_title}}"
+          title="{{site.title}} - {{site.data.home.summary_title}}" class="cmp-image__landscape" loading="lazy">
+      </a>
+    </div>
 
-      <div class="col-md-6 col-sm-12 d-flex flex-column justify-content-between information__something">
-        <h2 class="mt-md-20">{{site.data.home.summary_title}}</h2>
-        <p>
-          {{site.data.home.summary_description}}
-        </p>
-        <a href="{{site.baseurl}}{{site.data.home.summary_link}}" target="_blank" class="btn cbtn-accent mt-sm-3" title="{{site.data.home.summary_title}}">Read More</a>
-      </div>
+    <div class="col-md-6 col-sm-12 d-flex flex-column justify-content-between information__something">
+      <h2 class="mt-md-20">{{site.data.home.summary_title}}</h2>
+      <p>
+        {{site.data.home.summary_description}}
+      </p>
+      <a href="{{site.baseurl}}{{site.data.home.summary_link}}" target="_blank" class="btn cbtn-accent mt-sm-3"
+        title="{{site.data.home.summary_title}}">Read More</a>
     </div>
   </div>
-
-  <div class="container-xxl mt-40" id="infoSkills">
-    <div class="row pl-md-20 pr-md-20 pb-60 pb-sm-20">
-      <div class="col-md-6 col-sm-12 information__cmp mt-5">
-        <div class="information__skill-heading text-center">
-          <i class="fas fa-guitar hex-tertiary"></i>
-          <h3 class="hex-tertiary d-inline">{{site.data.home.feature_left_title}}</h3>
-        </div>
-        <a href="{{site.baseurl}}{{site.data.home.feature_left_link}}" target="_blank" class="mt-4 d-block" title="{{site.data.home.feature_left_title}}">
-          <img src="{{site.data.home.feature_left_image}}" alt="{{site.title}} - {{site.data.home.feature_left_title}}" title="{{site.title}} - {{site.data.home.feature_left_title}}" class="cmp-image__tube" loading="lazy">
-        </a>
-        <p class="mt-4 information__blurb">
-          {{site.data.home.feature_left_description}}
-        </p>
-        <a href="{{site.baseurl}}{{site.data.home.feature_left_link}}" target="_blank" class="btn cbtn-tertiary" title="{{site.data.home.feature_left_title}}">View Site</a>
-      </div>
-
-      <div class="col-md-6 col-sm-12 information__cmp mt-5">
-        <div class="information__skill-heading text-center">
-          <i class="fas fa-user-friends hex-tertiary"></i>
-          <h3 class="hex-tertiary d-inline">{{site.data.home.feature_right_title}}</h3>
-        </div>
-        <a href="{{site.baseurl}}{{site.data.home.feature_right_link}}" target="_blank" class="mt-4 d-block" title="{{site.data.home.feature_right_title}}">
-          <img src="{{site.data.home.feature_right_image}}" alt="{{site.title}} - {{site.data.home.feature_right_title}}" title="{{site.title}} - {{site.data.home.feature_right_title}}" class="cmp-image__tube" loading="lazy">
-        </a>
-        <p class="mt-4 information__blurb">
-          {{site.data.home.feature_right_description}}
-        </p>
-        <a href="{{site.baseurl}}{{site.data.home.feature_right_link}}" target="_blank" class="btn cbtn-tertiary" title="{{site.data.home.feature_right_title}}">Inquire</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Row Updates -->
-<section class="updates__container">
-  <!-- Latest Posts -->
-  {% include templates/latest-posts.html %}
-
-  <!-- Upcoming Events -->
-  <!-- {% include templates/upcoming-events.html %} -->
-
-
-  <!-- Row Contact Form -->
-  {% include templates/contact-form.html %}
-</section>
+</div>
