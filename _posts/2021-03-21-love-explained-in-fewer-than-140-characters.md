@@ -12,14 +12,12 @@ layout: single-post
 image: /assets/files/post6.jpg
 date: 2021-01-15T03:42:03.919Z
 categories:
-  - Music
   - Love
-  - Genres
-  - Gigs
+  - Content
+  - Alter
 tags:
-  - Violin
-  - Punk
-  - Folk
+  - Teen
+  - Threesome
 authors:
   - name: Rap Esteva
 ---
