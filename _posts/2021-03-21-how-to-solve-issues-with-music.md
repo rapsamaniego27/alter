@@ -12,14 +12,12 @@ layout: single-post
 image: /assets/files/post2.jpg
 date: 2020-09-17T03:34:54.462Z
 categories:
-  - Music
   - Personal
-  - Instruments
-  - Gigs
+  - Selling
+  - Alter
 tags:
-  - Rock
-  - Country
-  - Guitar
+  - Romantic
+  - Virgin
 authors:
   - name: Rap Esteva
 ---
